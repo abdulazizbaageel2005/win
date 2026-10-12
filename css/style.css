@@ -1,0 +1,67 @@
+
+
+#countdown {
+    color: green;
+    padding: 10px;
+}
+
+#cards {
+    display: none;
+}
+
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader-con {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000eb;
+}
+
+.list-group-item {
+    background-color: transparent;
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body { background: #fffaf5; color: #302b30; }
+.hero { background: linear-gradient(135deg, #fff0df, #fff3f5); border-radius: 24px; }
+.hero img { max-width: 230px; border-radius: 22px; box-shadow: 0 12px 28px #ed5e3820; }
+.hero h1 { font-weight: 700 !important; }
+#countdown { color: #b44218; background: #fff; border: 1px solid #ffdfc0; border-radius: 14px; padding: 16px; font-size: clamp(1rem, 3vw, 1.4rem); line-height: 1.8; font-variant-numeric: tabular-nums; }
+.list-group-item { padding-block: 13px; border-color: #e8dacf; }
+.registration-card { padding: 26px; background: white; border: 1px solid #f0e2d9; border-radius: 20px; box-shadow: 0 10px 30px #54281909; }
+.registration-card h3 { font-size: 1.35rem; margin-bottom: 24px; }
+.form-control { border-radius: 10px; padding: 11px 12px; }
+.form-control:focus { border-color: #ed8359; box-shadow: 0 0 0 .2rem #ff942620; }
+.error { color: #bb2941; }
+.btn-primary { background: #cf3c49; border-color: #cf3c49; border-radius: 12px; padding: 12px 22px; font-weight: 700; transition: transform .2s, box-shadow .2s; }
+.btn-primary:hover, .btn-primary:focus-visible { background: #b62e3c; border-color: #b62e3c; transform: translateY(-2px); box-shadow: 0 6px 16px #cf3c4925; }
+.btn-primary:disabled { background: #a1757a; border-color: #a1757a; }
+.loader-con { z-index: 1080; background: #211723ed; }
+.loader-caption { color: white; text-align: center; margin-top: 16px; white-space: nowrap; }
+.modal-content { border: 0; border-radius: 22px; overflow: hidden; box-shadow: 0 20px 70px #351a3030; }
+.modal-header { background: #fff4e5; border-bottom: 1px solid #ffead0; }
+.modal-body { padding: 30px 22px 40px; }
+.winner-trophy { font-size: 58px; }
+.winner-congrats { color: #8b5220; margin: 10px 0 16px; font-size: 1.2rem; }
+.winner-name { color: #bf3149; font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 700; overflow-wrap: anywhere; }
+.modal.show .winner-name { animation: winner-pop .6s ease-out; }
+#confetti { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 1100; }
+.confetti-piece { position: absolute; top: -20px; width: 9px; height: 15px; border-radius: 2px; animation: confetti-fall 3s linear both; }
+@keyframes winner-pop { from { opacity: 0; transform: translateY(14px) scale(.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes confetti-fall { to { transform: translate(var(--drift), 110vh) rotate(650deg); opacity: 0; } }
+@media (max-width: 575px) { .hero { margin: 10px; } .registration-card { padding: 22px 18px; } #winner { padding-inline: 10px; } }
+@media (prefers-reduced-motion: reduce) { .modal.show .winner-name, .confetti-piece { animation: none; } .btn-primary { transition: none; transform: none; } }
